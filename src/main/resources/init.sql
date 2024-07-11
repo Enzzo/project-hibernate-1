@@ -1,3 +1,17 @@
+CREATE SCHEMA IF NOT EXISTS rpg;
+USE rpg;
+CREATE TABLE IF NOT EXISTS player(
+    id INT,
+    name VARCHAR(128),
+    title VARCHAR(128),
+    race INT,
+    profession INT,
+    birthday DATETIME,
+    level INT,
+    banned BOOL,
+    PRIMARY KEY (id)
+);
+
 INSERT INTO rpg.player (id, name, title, race, profession, birthday, level, banned)
 VALUES (1, 'Ниус', 'Приходящий Без Шума', 6, 1, '2009-06-09 00:44:40.000000', 33, '\0'),
        (2, 'Никрашш', 'НайтВульф', 4, 0, '2006-07-09 08:50:40.000000', 58, '\0'),
