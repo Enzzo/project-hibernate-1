@@ -1,5 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS rpg;
 USE rpg;
+DROP TABLE IF EXISTS player;
+
 CREATE TABLE IF NOT EXISTS player(
     id INT,
     name VARCHAR(128),
@@ -8,7 +10,7 @@ CREATE TABLE IF NOT EXISTS player(
     profession INT,
     birthday DATETIME,
     level INT,
-    banned BOOL,
+    banned VARCHAR(1),
     PRIMARY KEY (id)
 );
 
