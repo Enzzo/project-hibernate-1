@@ -8,6 +8,7 @@ import java.util.Date;
 @Table(name = "player", schema = "rpg")
 public class Player {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id;
 
